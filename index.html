@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+        <li><a data-toggle="tab" href="#raffleDiv">Browse Raffles</a></li>
+        <li><a data-toggle="tab" href="#input">List A Raffle</a></li>
+        <li><a data-toggle="tab" href="#">Listed Raffles</a></li>
+        <li><a data-toggle="tab" href="#">Entered Raffles</a></li>
+    </ul>
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><strong>Hype Raffles</strong></h1>
+            <span class="avatar"><img src="images/raffle-ticket.jpg" alt="" /></span>
+            <h2>This is <strong>Hype Raffles</strong>, a blockchain based system for <strong>provably fair</strong> raffles</h2>
+
+            <h2 id="metamask">This site requires metamask. We recommend you install it.
+                <a href="https://metamask.io/" style="margin:auto"><img src="images/download-metamask.png"></a>
+            </h2>
+
+            <!--
+            <h2 id="balance"></h2>
+            <button onclick="displayShit()">List A Raffle</button>
+            <button onclick="ownerRaffles()">My Listed Raffles</button>
+-->
+
+        </header>
+        <!-- Main -->
+        <section id="main">
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                    <div class="container-fluid">
+                        <!-- If Needed Left and Right Padding in 'md' and 'lg' screen means use container class -->
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <h1>About</h1>
+                                <p>Hype Token is created to facilite fair and low cost raffles for clothing and sneakers. I noticed a growth in raffles for different items from clothing companies like Supreme and Palace. Ethereum smart contracts are an ideal way to augment these raffles to make them provably fair for their entrants and to allow for easy creation, payout and managing by raffle creators.</p>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <h1>How It Works</h1>
+                                <p>Hype Token is created to facilite fair and low cost raffles for clothing and sneakers. gggggggggggggggggggggggggggggggggg</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--
+                    <div class="row">
+                        <div class="col-6">
+                            <h1>About</h1>
+                            <p>Hype Token is created to facilite fair and low cost raffles for clothing and sneakers.</p>
+                        </div>
+                        <div class="col-6">
+                            <h1>About</h1>
+                            <p>Hype Token is created to facilite fair and low cost raffles for clothing and sneakers. gggggggggggggggggggggggggggggggggg</p>
+                        </div>
+                    </div>
+-->
+                </div>
+
+                <div id="input" class="tab-pane fade">
+                    <input type="text" id="instagram" placeholder="Link to instagram post"><br>
+                    <input type="text" id="entries" placeholder="Maximum number of entries"><br>
+                    <input type="text" id="cost" placeholder="Cost of an entry in Ethereum"><br>
+                    <button id="submit" onclick="hideShit()" style="margin-bottom: 25px">Submit Raffle (This will cost Eth)</button>
+                </div>
+
+                <!-- Raffles -->
+                <div class="tab-pane fade" id="raffleDiv">
+                    <section class="thumbnails" id="raffles" class="tab-pane fade">
+
+                    </section>
+                    <button onclick="dispMoreRaffles()">Load More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon style2 fa-github"><span class="label">Github</span></a></li>
+                <li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/web3.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
