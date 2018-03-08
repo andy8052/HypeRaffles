@@ -13,17 +13,17 @@
         <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
         <li><a data-toggle="tab" href="#raffleDiv">Browse Raffles</a></li>
         <li><a data-toggle="tab" href="#input">List A Raffle</a></li>
-        <li><a data-toggle="tab" href="#">Listed Raffles</a></li>
-        <li><a data-toggle="tab" href="#">Entered Raffles</a></li>
+        <li><a data-toggle="tab" href="#listed">Listed Raffles</a></li>
+        <li><a data-toggle="tab" href="#entered">Entered Raffles</a></li>
     </ul>
     <!-- Wrapper -->
     <div id="wrapper">
 
         <!-- Header -->
         <header id="header">
-            <h1><strong>Hype Raffles</strong></h1>
+            <h1><strong>Rafflr</strong></h1>
             <span class="avatar"><img src="images/raffle-ticket.jpg" alt="" /></span>
-            <h2>This is <strong>Hype Raffles</strong>, a blockchain based system for <strong>provably fair</strong> raffles</h2>
+            <h2>This is <strong>Rafflr</strong>, a blockchain based system for <strong>provably fair</strong> raffles</h2>
 
             <h2 id="metamask">This site requires metamask. We recommend you install it.
                 <a href="https://metamask.io/" style="margin:auto"><img src="images/download-metamask.png"></a>
@@ -45,7 +45,7 @@
                         <div class="row">
                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                 <h1>About</h1>
-                                <p>Hype Raffles is created to facilite fair and low cost raffles for clothing and sneakers. I noticed a growth in raffles for different items from clothing companies like Supreme and Palace. Ethereum smart contracts are an ideal way to augment these raffles to make them provably fair for their entrants and to allow for easy creation, payout and managing by raffle creators.</p>
+                                <p>Rafflr is created to facilite fair and low cost raffles for clothing and sneakers. I noticed a growth in raffles for different items from clothing companies like Supreme and Palace. Ethereum smart contracts are an ideal way to augment these raffles to make them provably fair for their entrants and to allow for easy creation, payout and managing by raffle creators.</p>
                             </div>
                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                 <img src="images/eth4.png" class="img-responsive" style="margin: 0 auto;">
@@ -57,17 +57,17 @@
                             </div>
                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                 <h1>How It Works</h1>
-                                <p>Hype Raffles is based on a Solidity smart contract that is deployed on the Ethereum blockchain. The smart contract allows for raffle creators to generate raffles and link them to instagram posts to house photos of the item up for raffle. From there, users can view open raffles, the history of their creators and the raffle logistics. These raffles are immutable on the blockchain.</p>
+                                <p>Rafflr is based on a Solidity smart contract that is deployed on the Ethereum blockchain. The smart contract allows for raffle creators to generate raffles and link them to instagram posts to house photos of the item up for raffle. From there, users can view open raffles, the history of their creators and the raffle logistics. These raffles are immutable on the blockchain.</p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                 <h1>Why Use Crypto?</h1>
-                                <p>Systems such as paypal and venmo have serveral major flaws.<br> 1. These systems require the money to go into the hands of the raffle creator prior to raffle completion. This allows for people to just cancel the raffle and leave with peoples money. The Hype Raffle smart contract acts as an escrow contract for these raffles.<br>2. This contract allows for an immutable history of raffle creators history. If a seller does not have a good history of raffles, you can see that publicly.</p>
+                                <p>Systems such as paypal and venmo have serveral major flaws.<br> 1. These systems require the money to go into the hands of the raffle creator prior to raffle completion. This allows for people to just cancel the raffle and leave with peoples money. The Rafflr smart contract acts as an escrow contract for these raffles.<br>2. This contract allows for an immutable history of raffle creators history. If a seller does not have a good history of raffles, you can see that publicly.</p>
                             </div>
                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                 <h1>Fees</h1>
-                                <p>Paypal charges 4% fees on invoices. Hype Raffles only take a 2% cut of all raffle proceeds and slowly scale down to 0.5% of fees based on the number of raffles you have completes. This is designed to encourage trustworthy raffle creators.</p>
+                                <p>Paypal charges 4% fees on invoices. Rafflr takes a 2% cut of all raffle proceeds. This percentage scales down to 0.5% of fees based on the number of raffles you have completed and becoming a verified raffle creator. This is designed to encourage trustworthy raffle creators.</p>
                             </div>
                         </div>
                     </div>
@@ -85,7 +85,26 @@
                     <section class="thumbnails" id="raffles" class="tab-pane fade">
 
                     </section>
-                    <button onclick="dispMoreRaffles()">Load More</button>
+                    <section class="thumbnails" id="loadmore" class="tab-pane fade">
+                        <a onclick="dispMoreRaffles()">
+                            <h3>Load More</h3>
+                        </a>
+
+                    </section>
+                </div>
+
+                <!-- Listed Raffles -->
+                <div class="tab-pane fade" id="listed">
+                    <section class="thumbnails" id="listedRaffles" class="tab-pane fade">
+
+                    </section>
+                </div>
+
+                <!-- Entered Raffles -->
+                <div class="tab-pane fade" id="entered">
+                    <section class="thumbnails" id="enteredRaffles" class="tab-pane fade">
+
+                    </section>
                 </div>
             </div>
         </section>

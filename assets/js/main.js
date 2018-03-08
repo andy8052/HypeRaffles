@@ -15,6 +15,12 @@ var div2 = document.createElement("div");
 div2.id = "div2";
 var div3 = document.createElement("div");
 div3.id = "div3";
+var listdiv1 = document.createElement("div");
+listdiv1.id = "listdiv1";
+var listdiv2 = document.createElement("div");
+listdiv2.id = "listdiv2";
+var listdiv3 = document.createElement("div");
+listdiv3.id = "listdiv3";
 window.addEventListener('load', function () {
 
     // Checking if Web3 has been injected by the browser (Mist/MetaMask)
@@ -673,7 +679,15 @@ window.addEventListener('load', function () {
     var div = document.createElement("div");
     var counter = 0;
     var mod = 0;
+    //
+    //    web3js.eth.getAccounts(function (error, accounts) {
+    //        address = accounts[0];
+    //    });
+
     const loadCryptoAssets = async() => {
+        var accounts = await web3js.eth.getAccounts();
+        address = accounts[0];
+        console.log(address);
         var numRaffles = await myContract.methods.getRaffleLength().call()
         console.log(numRaffles);
         var start = numRaffles - 1;
@@ -701,13 +715,12 @@ window.addEventListener('load', function () {
         main.appendChild(div1);
         main.appendChild(div2);
         main.appendChild(div3);
+        ownerRaffles()
     }
 
-    web3js.eth.getAccounts(function (error, accounts) {
-        address = accounts[0];
-    });
 
     loadCryptoAssets()
+
 })
 
 const dispMoreRaffles = async() => {
@@ -749,33 +762,28 @@ function overWrite(div, instaId, raffleId) {
 }
 
 const ownerRaffles = async() => {
+    console.log(address)
     var raffles = await myContract.methods.getRafflesToOwner(address).call();
     var counter = 0;
     for (var i = 0; i < raffles.length; i++) {
         var raffleList = await myContract.methods.raffleList(raffles[i]).call()
 
         if ((i % 3) == 0) {
-            if (i == 0) {
-                overWrite(div1, raffleList["instagramId"], raffleList["id"])
-            } else {
-                createRaffleDisplay(div1, raffleList["instagramId"], raffleList["id"])
-            }
+            createRaffleDisplay(listdiv1, raffleList["instagramId"], raffleList["id"])
         }
         if ((i % 3) == 1) {
-            if (i == 1) {
-                overWrite(div2, raffleList["instagramId"], raffleList["id"])
-            } else {
-                createRaffleDisplay(div2, raffleList["instagramId"], raffleList["id"])
-            }
+            createRaffleDisplay(listdiv2, raffleList["instagramId"], raffleList["id"])
+
         }
         if ((i % 3) == 2) {
-            if (i == 2) {
-                overWrite(div3, raffleList["instagramId"], raffleList["id"])
-            } else {
-                createRaffleDisplay(div3, raffleList["instagramId"], raffleList["id"])
-            }
+            createRaffleDisplay(listdiv3, raffleList["instagramId"], raffleList["id"])
         }
     }
+
+    var main = document.getElementById("listedRaffles");
+    main.appendChild(listdiv1);
+    main.appendChild(listdiv2);
+    main.appendChild(listdiv3);
 }
 
 function joinRaffle(raffleId) {
