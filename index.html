@@ -9,46 +9,44 @@
 </head>
 
 <body>
-    <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-        <li><a data-toggle="tab" href="#raffleDiv">Browse Raffles</a></li>
-        <li><a data-toggle="tab" href="#input">List A Raffle</a></li>
-        <li><a data-toggle="tab" href="#listed">Listed Raffles</a></li>
-        <li><a data-toggle="tab" href="#entered">Entered Raffles</a></li>
-    </ul>
+  <div id="navbar" class="container-fluid">
+      <div id="logo" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <img src="images/logo.png" height="43">
+      </div>
+      <div id="nav" class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+        <ul class="nav nav-pills">
+            <li class="thumbnailTabs"><a data-toggle="tab" href="#home">Home</a></li>
+            <li class="myTabs"><a data-toggle="tab" href="#raffleDiv">Browse Raffles</a></li>
+            <li><a data-toggle="pill" href="#input">List A Raffle</a></li>
+            <li><a data-toggle="pill" href="#listed">Listed Raffles</a></li>
+            <li><a data-toggle="pill" href="#entered">Entered Raffles</a></li>
+        </ul>
+      </div>
+    </div>
     <!-- Wrapper -->
     <div id="wrapper">
-
-        <!-- Header -->
-        <header id="header">
-            <img src="images/logo.png" width="300">
-            <h1><strong>Rafflr</strong></h1>
-            <span class="avatar"><img src="images/raffle-ticket.jpg" alt="" /></span>
-            <h2>This is <strong>Rafflr</strong>, a blockchain based system for <strong>provably fair</strong> raffles</h2>
-
-            <h2 id="metamask">This site requires metamask. We recommend you install it.
-                <a href="https://metamask.io/" style="margin:auto"><img src="images/download-metamask.png"></a>
-            </h2>
-
-            <!--
-            <h2 id="balance"></h2>
-            <button onclick="displayShit()">List A Raffle</button>
-            <button onclick="ownerRaffles()">My Listed Raffles</button>
--->
-
-        </header>
         <!-- Main -->
         <section id="main">
             <div class="tab-content">
                 <div id="home" class="tab-pane fade in active">
+                  <!-- Header -->
+                  <header id="header">
+                      <!-- <h1><strong>Rafflr</strong></h1> -->
+                      <!-- <span class="avatar"><img src="images/raffle-ticket.jpg" alt="" /></span> -->
+                      <h2>This is <strong>Rafflr</strong>, a blockchain based system for <strong>provably fair</strong> raffles</h2>
+
+                      <h2 id="metamask">This site requires metamask. We recommend you install it.
+                          <a href="https://metamask.io/" style="margin:auto"><img src="images/download-metamask.png"></a>
+                      </h2>
+
+                  </header>
                     <div class="container-fluid">
-                        <!-- If Needed Left and Right Padding in 'md' and 'lg' screen means use container class -->
                         <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="aboutPage col-xs-8 col-sm-8 col-md-8 col-lg-8">
                                 <h1>About</h1>
                                 <p>Rafflr is created to facilite fair and low cost raffles for clothing and sneakers. I noticed a growth in raffles for different items from clothing companies like Supreme and Palace. Ethereum smart contracts are an ideal way to augment these raffles to make them provably fair for their entrants and to allow for easy creation, payout and managing by raffle creators.</p>
                             </div>
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                                 <img src="images/eth4.png" class="img-responsive" style="margin: 0 auto;">
                             </div>
                         </div>
@@ -56,29 +54,46 @@
                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                 <img src="images/sc.png" class="img-responsive">
                             </div>
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="aboutPage col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                 <h1>How It Works</h1>
                                 <p>Rafflr is based on a Solidity smart contract that is deployed on the Ethereum blockchain. The smart contract allows for raffle creators to generate raffles and link them to instagram posts to house photos of the item up for raffle. From there, users can view open raffles, the history of their creators and the raffle logistics. These raffles are immutable on the blockchain.</p>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="aboutPage col-xs-5 col-sm-5 col-md-5 col-lg-5">
                                 <h1>Why Use Crypto?</h1>
                                 <p>Systems such as paypal and venmo have serveral major flaws.<br> 1. These systems require the money to go into the hands of the raffle creator prior to raffle completion. This allows for people to just cancel the raffle and leave with peoples money. The Rafflr smart contract acts as an escrow contract for these raffles.<br>2. This contract allows for an immutable history of raffle creators history. If a seller does not have a good history of raffles, you can see that publicly.</p>
                             </div>
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                            </div>
+                            <div class="aboutPage col-xs-5 col-sm-5 col-md-5 col-lg-5">
                                 <h1>Fees</h1>
                                 <p>Paypal charges 4% fees on invoices. Rafflr takes a 2% cut of all raffle proceeds. This percentage scales down to 0.5% of fees based on the number of raffles you have completed and becoming a verified raffle creator. This is designed to encourage trustworthy raffle creators.</p>
                             </div>
                         </div>
                     </div>
+                    <!-- Footer -->
+                    <footer id="footer">
+                        <ul class="icons">
+                            <li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="#" class="icon style2 fa-github"><span class="label">Github</span></a></li>
+                            <li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+                        </ul>
+                    </footer>
                 </div>
 
                 <div id="input" class="tab-pane fade">
                     <input type="text" id="instagram" placeholder="Link to instagram post"><br>
                     <input type="text" id="entries" placeholder="Maximum number of entries"><br>
                     <input type="text" id="cost" placeholder="Cost of an entry in Ethereum"><br>
-                    <button id="submit" onclick="hideShit()" style="margin-bottom: 25px">Submit Raffle (This will cost Eth)</button>
+                    <!-- <button id="submit" onclick="hideShit()" style="margin-bottom: 25px">Submit Raffle (This will cost Eth)</button> -->
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    </div>
+                    <div class="thumbnails col-xs-4 col-sm-4 col-md-4 col-lg-4" >
+                      <a onclick="hideShit()" style="margin-bottom: 25px">
+                        <h3>Submit Raffle</h3>
+                      </a>
+                    </div>
                 </div>
 
                 <!-- Raffles -->
@@ -87,9 +102,13 @@
 
                     </section>
                     <section class="thumbnails" id="loadmore" class="tab-pane fade">
-                        <a onclick="dispMoreRaffles()">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        </div>
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                          <a onclick="dispMoreRaffles()">
                             <h3>Load More</h3>
-                        </a>
+                          </a>
+                        </div>
 
                     </section>
                 </div>
@@ -109,15 +128,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Footer -->
-        <footer id="footer">
-            <ul class="icons">
-                <li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
-                <li><a href="#" class="icon style2 fa-github"><span class="label">Github</span></a></li>
-                <li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
-            </ul>
-        </footer>
 
     </div>
 
